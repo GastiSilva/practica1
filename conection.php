@@ -1,17 +1,17 @@
 <?php 
+//variables para establecer conexion
+    $servername = "localhost";
+    $username = "username";
+    $password = "";
+    
+// creo conexion
+$conexion = new mysqli($servername, $username, $password, $dbname);
 
-$server = "localhost";
-$user = "root";
-$pass = "";
-$db = "test";
 
-$conection = new mysqli($server, $user, $pass, $db);
-
-if($conection->connect_errno){
-    die("Conexion fallida".$conection->connect_error);
-}else{
-    echo"conectado";
-}
+    $nombre = $_POST["nombre"];
+    $edad = $_POST["edad"];
+    echo $nombre . "<br>";
+    echo $edad . "<br>;
 
 ?>
 
